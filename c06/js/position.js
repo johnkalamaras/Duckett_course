@@ -18,4 +18,4 @@ function showPosition(event){
 }
 
 var el = document.getElementById('body');
-el.addEventListener('mouseover',function(){showPosition(event)},false);
+el.addEventListener('mouseover',showPosition,false);
