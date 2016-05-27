@@ -11,9 +11,9 @@ function charCount(e){
     counter = (180-(textEntered.length));
     charDisplay.textContent = counter;
     
-    lastkey = document.getElementById('lastkey');
+    lastkey = document.getElementById('lastKey');
     lastkey.textContent = 'Last key in ASCII code: ' + e.keyCode;
 }
 var el;
 el = document.getElementById('message');
-el.addEventListener('keypress',function(){charCount(e)},false);
+el.addEventListener('keypress',charCount,false);
