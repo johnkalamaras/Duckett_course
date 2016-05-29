@@ -16,20 +16,6 @@ function writeLabel(e){
 }
 
 // This is where the record / pause controls and functions go...
-// See right-hand page
-
-if(document.addEventListener){
-    document.addEventListener('click',function (e) {
-        recorderControls(e);
-    },false);
-    noteInput.addEventListener('input',writeLabel,false);
-}else{
-    document.attachEvent('onclick',function(e){
-        recorderControls(e);
-    });
-    noteInput.attachEvent('onkeyup',writeLabel);
-}
-
 function recorderControls(e){
     if(!e){
         e = window.event;
@@ -59,6 +45,20 @@ function stop(target){
     target.setAttribute('data-state','record');
     target.textContent = 'record';
 }
+
+if(document.addEventListener){
+    document.addEventListener('click',function (e) {
+        recorderControls(e);
+    },false);
+    noteInput.addEventListener('input',writeLabel,false);
+}else{
+    document.attachEvent('onclick',function(e){
+        recorderControls(e);
+    });
+    noteInput.attachEvent('onkeyup',writeLabel);
+}
+
+
 
 
 
